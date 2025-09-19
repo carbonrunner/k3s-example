@@ -19,6 +19,7 @@ on:
         description: 'Upload contents of build/out, used to build the k3s image externally'
         required: false
         default: false
+  workflow_dispatch:
 
 permissions:
   contents: read
