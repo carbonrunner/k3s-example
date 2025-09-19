@@ -26,7 +26,7 @@ permissions:
 jobs:
   build:
     name: Build # DO NOT CHANGE THIS NAME, we rely on it for INSTALL_K3S_PR functionality
-    runs-on: ${{ contains(inputs.arch, 'arm') && 'ubuntu-24.04-arm' || 'ubuntu-24.04' }}
+    runs-on: carbonrunner-2vcpu-ubuntu-latest
     timeout-minutes: 20
     env:
       BIN_EXT: ${{ inputs.os == 'windows' && '.exe' || '' }}
