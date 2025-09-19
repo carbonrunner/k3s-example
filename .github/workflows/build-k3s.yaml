@@ -52,11 +52,11 @@ jobs:
     strategy:
       matrix:
         include:
-          - name: CarbonRunner 2vcpu
+          - name: CarbonRunner 4vcpu
             runs-on:
-              - carbonrunner-2vcpu-ubuntu-latest
+              - carbonrunner-4vcpu-ubuntu-latest
               - crcloud
-          - name: Github 2vcpu
+          - name: Github 4vcpu
             runs-on:
               - ubuntu-latest
           
