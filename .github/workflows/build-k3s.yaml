@@ -48,6 +48,17 @@ jobs:
     name: Build # DO NOT CHANGE THIS NAME, we rely on it for INSTALL_K3S_PR functionality
     runs-on: carbonrunner-2vcpu-ubuntu-latest
     timeout-minutes: 20
+    
+    strategy:
+      matrix:
+        include:
+          - name: CarbonRunner 2vcpu
+            runs-on:
+              - carbonrunner-2vcpu-ubuntu-latest
+          - name: Github 2vcpu
+            runs-on:
+              - ubuntu-latest
+          
     env:
       BIN_EXT: ${{ inputs.os == 'windows' && '.exe' || '' }}
       ARCH_EXT: ${{ inputs.os == 'windows' && '-windows' || format('-{0}', inputs.arch) }}
