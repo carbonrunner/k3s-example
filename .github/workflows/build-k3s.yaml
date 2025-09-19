@@ -46,7 +46,7 @@ permissions:
 jobs:
   build:
     name: Build # DO NOT CHANGE THIS NAME, we rely on it for INSTALL_K3S_PR functionality
-    runs-on: carbonrunner-2vcpu-ubuntu-latest
+    runs-on: ${{matrix.runs-on}}
     timeout-minutes: 20
     
     strategy:
