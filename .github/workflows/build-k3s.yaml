@@ -20,6 +20,25 @@ on:
         required: false
         default: false
   workflow_dispatch:
+    inputs:
+      arch:
+        type: string
+        description: 'Architecture to build (amd64, arm64, or arm)'
+        default: 'amd64'
+      os:
+        type: string
+        description: 'Target OS (linux or windows)'
+        default: 'linux'
+      upload-image:
+        type: boolean
+        description: 'Build and upload k3s image (only works on arm64 or amd64)'
+        required: false
+        default: false
+      upload-build:
+        type: boolean
+        description: 'Upload contents of build/out, used to build the k3s image externally'
+        required: false
+        default: false
 
 permissions:
   contents: read
