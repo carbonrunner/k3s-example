@@ -55,6 +55,7 @@ jobs:
           - name: CarbonRunner 2vcpu
             runs-on:
               - carbonrunner-2vcpu-ubuntu-latest
+              - crcloud
           - name: Github 2vcpu
             runs-on:
               - ubuntu-latest
