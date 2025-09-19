@@ -67,6 +67,9 @@ jobs:
     steps:
     - name: Checkout K3s
       uses: actions/checkout@v5
+
+    - name: CPU INFO
+      run: cat /proc/cpuinfo
     
     - name: Set up QEMU
       if: inputs.arch == 'arm'
